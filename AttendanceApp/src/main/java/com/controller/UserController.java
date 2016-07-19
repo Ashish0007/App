@@ -1,21 +1,22 @@
 package com.controller;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestMethod;
 
-@RestController
+@Controller
 public class UserController {
 	
-	@RequestMapping(value="/hello")
+	/*@RequestMapping(value="/hello")
 	public String sayHello(){
 		System.out.println("at hello level");
 		return "hello, People";
 	}
-	
-	@RequestMapping(value="/")
-	public String root(){
+	*/
+	@RequestMapping(value="/login",method=RequestMethod.GET)
+	public String login(){
 		System.out.println("at root level");
-		return "Hi, visitor";
+		return "login";
 	}
 
 }
